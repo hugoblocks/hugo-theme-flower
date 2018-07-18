@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="soon">
+    <div class="cover with-background-logo">
+        <div class="container">
+            <div class="hero row align-items-center justify-content-center">
+                <div class="col-8 col-md-6">
+                {{ .Content }}
+                </div>
+            </div>
+        </div>
+    </div>
+{{ partial "footer-minimal.html" . }}
+</div>
+{{ end }}

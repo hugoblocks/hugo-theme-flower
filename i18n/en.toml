@@ -1,0 +1,39 @@
+[en]
+other = "In English / Anglais"
+
+[fr]
+other = "In French / Français"
+
+[learnmore]
+other = "Learn More"
+
+[readmore]
+other = "Read More"
+
+[connect_with_us]
+other = "Connect with us"
+
+[with_the_tags]
+other = "With the tags"
+
+[published_on]
+other = "Published on"
+
+[written_by]
+other = "Written by"
+
+[subscribe]
+other = "Subscribe"
+
+[subscribe_header]
+other = "Subscribe to our mailing list"
+
+[subscribe_description]
+other = "Subscribe to receive our next articles, examples & guides."
+
+[field_firstname]
+other = "First Name"
+
+[field_email]
+other = "Email Address"
+

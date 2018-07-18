@@ -1,0 +1,11 @@
+name: "Flow"
+license: "MIT"
+licenselink: "https://raw.githubusercontent.com/lsenta/hugo-theme-flower/master/LICENSE.md"
+description: "Flower is a vibrant and delicate theme for Advanced Products, originally designed by @lsenta / @laurentsenta"
+homepage: "https://github.com/lsenta/hugo-theme-flower"
+tags: ["landing", "blog", "light", "green", "lsenta", "singulareva"]
+# TODO: features : ["blog", "disqus", "google analytics", "pagination", "rss", "sharing options"]
+# TODO: min_version : 0.14
+taxonomies:
+  tag: "tags"
+
