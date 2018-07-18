@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ if .Params.LanguageCode }}{{ .Params.LanguageCode }}{{ else }}{{ .Site.LanguageCode }}{{ end }}">
 <head>
-{{ partial "meta/google-gtag" . }}
-{{ partial "meta/google-tag-a" . }}
+
+{{ with .Site.Params.Analytics.Google }}
+    {{ partial "analytics/google.html" .}}
+{{ end }}
 
 {{ with .Params.redirectTo }}
     <meta http-equiv="refresh" content="0; url={{ . }}">
     <script type="text/javascript">
-        window.location.href = "{{ . }}"
+        window.location.href = "{{ . }}";
     </script>
 {{ end }}
 
@@ -71,34 +73,37 @@
     {{- end -}}
     </title>
 
-{{ with .Site.Params.fontAwesomeID }}
-    <script src="https://use.fontawesome.com/{{ . }}.js"></script>
-{{ end }}
+    <!-- Font Awesome, Pro 5 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.1.1/css/regular.css"
+          integrity="sha384-AKIrAHbICIQF+NEqtykrcdzMjExDiKLa9hOyUVsr4PlHtktH7xaD10vO98UnPjuE" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.1.1/css/brands.css"
+          integrity="sha384-E5dVkWQIVhVPtBz/KK2TS7EM9l1+5XiWFPX7l3+5ayHPwDguGsHqof3GQbk55AS3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.1.1/css/fontawesome.css"
+          integrity="sha384-bHoj6f1b1CQ6zapOREeYBO/JnDjeV1fLuKn3KHnbqAAnkLva11KY3m8YyKPVXYLF" crossorigin="anonymous">
 
     <script src="/js/smooth-scroll.polyfills.min.js"></script>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:700|Fira+Sans" rel="stylesheet">
 
-    <!-- Itsnear -->
-    <link rel="stylesheet" href="/css/itsnear.css">
+    <!-- Flower -->
+    <link rel="stylesheet" href="/css/flower.css">
 </head>
 <body>
-{{ partial "meta/google-tag-b" . }}
 {{ block "main" . }}{{ end }}
 
 <script>
     var scroll = new SmoothScroll('a[href*="#"]');
 </script>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
-        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
-        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+        integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
         crossorigin="anonymous"></script>
 </body>
 </html>
